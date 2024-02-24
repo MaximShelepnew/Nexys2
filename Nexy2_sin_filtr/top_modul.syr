@@ -1,0 +1,665 @@
+Release 14.1 - xst P.15xf (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: top_modul.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_modul.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_modul"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : top_modul
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/spi_master.vhd" in Library work.
+Entity <spi_master> compiled.
+Entity <spi_master> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/ADC_priem.vhd" in Library work.
+Entity <ADC_priem> compiled.
+Entity <ADC_priem> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/filter.vhd" in Library work.
+Entity <filter> compiled.
+Entity <filter> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/top_modul.vhd" in Library work.
+Entity <top_modul> compiled.
+Entity <top_modul> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top_modul> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <spi_master> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ADC_priem> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <filter> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top_modul> in library <work> (Architecture <Behavioral>).
+Entity <top_modul> analyzed. Unit <top_modul> generated.
+
+Analyzing Entity <spi_master> in library <work> (Architecture <Behavioral>).
+Entity <spi_master> analyzed. Unit <spi_master> generated.
+
+Analyzing Entity <ADC_priem> in library <work> (Architecture <Behavioral>).
+INFO:Xst:2679 - Register <DataADC1<11>> in unit <ADC_priem> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DataADC1<5>> in unit <ADC_priem> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <ADC_priem> analyzed. Unit <ADC_priem> generated.
+
+Analyzing Entity <filter> in library <work> (Architecture <rtl>).
+Entity <filter> analyzed. Unit <filter> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <spi_master>.
+    Related source file is "C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/spi_master.vhd".
+    Found 1-bit register for signal <MOSI2_spi>.
+    Found 1-bit register for signal <MOSI1_spi>.
+    Found 5-bit up counter for signal <bit_counter>.
+    Found 1-bit register for signal <CS_s>.
+    Found 1-bit 17-to-1 multiplexer for signal <CS_s$mux0000> created at line 79.
+    Found 12-bit register for signal <Data1_s>.
+    Found 12-bit register for signal <Data2_s>.
+    Found 1-bit 17-to-1 multiplexer for signal <MOSI1_spi$mux0001> created at line 79.
+    Found 1-bit 17-to-1 multiplexer for signal <MOSI2_spi$mux0001> created at line 79.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <spi_master> synthesized.
+
+
+Synthesizing Unit <ADC_priem>.
+    Related source file is "C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/ADC_priem.vhd".
+WARNING:Xst:647 - Input <MOSI2_spi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 12-bit register for signal <DataADC>.
+    Found 4-bit up counter for signal <bit_counter>.
+    Found 1-bit register for signal <CS_s>.
+    Found 5-bit register for signal <DataADC1<10:6>>.
+    Found 5-bit register for signal <DataADC1<4:0>>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  23 D-type flip-flop(s).
+Unit <ADC_priem> synthesized.
+
+
+Synthesizing Unit <filter>.
+    Related source file is "C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/filter.vhd".
+WARNING:Xst:646 - Signal <sum10<26:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_9<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_8<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_7<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_6<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_5<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_4<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_3<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_2<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_10<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp_1<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mul_temp<24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp_9<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp_8<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp_7<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp_6<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp_5<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp_4<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp_3<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp_2<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp_1<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_temp<27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 28-bit adder for signal <add_temp>.
+    Found 28-bit adder for signal <add_temp_1>.
+    Found 28-bit adder for signal <add_temp_2>.
+    Found 28-bit adder for signal <add_temp_3>.
+    Found 28-bit adder for signal <add_temp_4>.
+    Found 28-bit adder for signal <add_temp_5>.
+    Found 28-bit adder for signal <add_temp_6>.
+    Found 28-bit adder for signal <add_temp_7>.
+    Found 28-bit adder for signal <add_temp_8>.
+    Found 28-bit adder for signal <add_temp_9>.
+    Found 132-bit register for signal <delay_pipeline>.
+    Found 12x13-bit multiplier for signal <mul_temp>.
+    Found 12x13-bit multiplier for signal <mul_temp_1>.
+    Found 12x13-bit multiplier for signal <mul_temp_10>.
+    Found 12x13-bit multiplier for signal <mul_temp_2>.
+    Found 12x13-bit multiplier for signal <mul_temp_3>.
+    Found 12x13-bit multiplier for signal <mul_temp_4>.
+    Found 12x13-bit multiplier for signal <mul_temp_5>.
+    Found 12x13-bit multiplier for signal <mul_temp_6>.
+    Found 12x13-bit multiplier for signal <mul_temp_7>.
+    Found 12x13-bit multiplier for signal <mul_temp_8>.
+    Found 12x13-bit multiplier for signal <mul_temp_9>.
+    Found 12-bit register for signal <output_register>.
+    Found 24-bit adder for signal <output_typeconvert$add0000> created at line 206.
+    Summary:
+	inferred 144 D-type flip-flop(s).
+	inferred  11 Adder/Subtractor(s).
+	inferred  11 Multiplier(s).
+Unit <filter> synthesized.
+
+
+Synthesizing Unit <top_modul>.
+    Related source file is "C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/top_modul.vhd".
+WARNING:Xst:1780 - Signal <pila> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ink> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Data1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4096x12-bit ROM for signal <Data2$rom0000> created at line 4227.
+    Found 1-bit register for signal <clk_da2>.
+    Found 11-bit up counter for signal <cnt>.
+    Found 12-bit up counter for signal <i>.
+    Found 12-bit register for signal <RES_out>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  13 D-type flip-flop(s).
+Unit <top_modul> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4096x12-bit ROM                                       : 1
+# Multipliers                                          : 11
+ 12x13-bit multiplier                                  : 11
+# Adders/Subtractors                                   : 11
+ 24-bit adder                                          : 1
+ 28-bit adder                                          : 10
+# Counters                                             : 4
+ 11-bit up counter                                     : 1
+ 12-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 42
+ 1-bit register                                        : 27
+ 12-bit register                                       : 15
+# Multiplexers                                         : 3
+ 1-bit 17-to-1 multiplexer                             : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <top_modul>.
+INFO:Xst:3044 - The ROM <Mrom_Data2_rom0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <spi/Data2_s>.
+INFO:Xst:3225 - The RAM <Mrom_Data2_rom0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 12-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <nSync>         | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <i>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <spi/Data2_s>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <top_modul> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x12-bit single-port block RAM                     : 1
+# Multipliers                                          : 11
+ 12x13-bit multiplier                                  : 11
+# Adders/Subtractors                                   : 11
+ 24-bit adder                                          : 4
+ 27-bit adder                                          : 7
+# Counters                                             : 4
+ 11-bit up counter                                     : 1
+ 12-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 195
+ Flip-Flops                                            : 195
+# Multiplexers                                         : 3
+ 1-bit 17-to-1 multiplexer                             : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top_modul> ...
+
+Optimizing unit <ADC_priem> ...
+
+Optimizing unit <filter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_modul, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 227
+ Flip-Flops                                            : 227
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_modul.ngr
+Top Level Output File Name         : top_modul
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 928
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 32
+#      LUT2                        : 253
+#      LUT3                        : 32
+#      LUT4                        : 44
+#      MUXCY                       : 273
+#      MUXF5                       : 10
+#      MUXF6                       : 2
+#      VCC                         : 1
+#      XORCY                       : 274
+# FlipFlops/Latches                : 227
+#      FD                          : 25
+#      FDCE                        : 144
+#      FDE                         : 23
+#      FDR                         : 34
+#      FDS                         : 1
+# RAMS                             : 3
+#      RAMB16_S4                   : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 19
+#      IBUF                        : 5
+#      OBUF                        : 14
+# MULTs                            : 11
+#      MULT18X18SIO                : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      270  out of   4656     5%  
+ Number of Slice Flip Flops:            227  out of   9312     2%  
+ Number of 4 input LUTs:                367  out of   9312     3%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  19  out of    232     8%  
+ Number of BRAMs:                         3  out of     20    15%  
+ Number of MULT18X18SIOs:                11  out of     20    55%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | IBUF+BUFG              | 74    |
+clk_da21                           | BUFG                   | 156   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+switch<2>                          | IBUF                   | 144   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 34.259ns (Maximum Frequency: 29.189MHz)
+   Minimum input arrival time before clock: 6.139ns
+   Maximum output required time after clock: 4.914ns
+   Maximum combinational path delay: 5.021ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 11.036ns (frequency: 90.613MHz)
+  Total number of paths / destination ports: 517 / 120
+-------------------------------------------------------------------------
+Delay:               5.518ns (Levels of Logic = 3)
+  Source:            ADCrwfgwg/bit_counter_3 (FF)
+  Destination:       ADCrwfgwg/DataADC1_4 (FF)
+  Source Clock:      clk falling
+  Destination Clock: clk rising
+
+  Data Path: ADCrwfgwg/bit_counter_3 to ADCrwfgwg/DataADC1_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             19   0.591   1.164  ADCrwfgwg/bit_counter_3 (ADCrwfgwg/bit_counter_3)
+     LUT3:I1->O            6   0.704   0.844  ADCrwfgwg/DataADC1_3_mux000011 (ADCrwfgwg/N2)
+     LUT3:I0->O            1   0.704   0.499  ADCrwfgwg/DataADC1_4_mux0000_SW0 (N16)
+     LUT4:I1->O            1   0.704   0.000  ADCrwfgwg/DataADC1_4_mux0000 (ADCrwfgwg/DataADC1_4_mux0000)
+     FD:D                      0.308          ADCrwfgwg/DataADC1_4
+    ----------------------------------------
+    Total                      5.518ns (3.011ns logic, 2.507ns route)
+                                       (54.6% logic, 45.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_da21'
+  Clock period: 34.259ns (frequency: 29.189MHz)
+  Total number of paths / destination ports: 546965891600 / 156
+-------------------------------------------------------------------------
+Delay:               34.259ns (Levels of Logic = 58)
+  Source:            filtr_kih/delay_pipeline_0_0 (FF)
+  Destination:       filtr_kih/output_register_11 (FF)
+  Source Clock:      clk_da21 rising
+  Destination Clock: clk_da21 rising
+
+  Data Path: filtr_kih/delay_pipeline_0_0 to filtr_kih/output_register_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.447  filtr_kih/delay_pipeline_0_0 (filtr_kih/delay_pipeline_0_0)
+     MULT18X18SIO:A0->P0    1   3.657   0.595  filtr_kih/Mmult_mul_temp_10 (filtr_kih/mul_temp_10<0>)
+     LUT2:I0->O            1   0.704   0.000  filtr_kih/Madd_add_temp_Madd_lut<0> (filtr_kih/Madd_add_temp_Madd_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_Madd_cy<0> (filtr_kih/Madd_add_temp_Madd_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_add_temp_Madd_cy<1> (filtr_kih/Madd_add_temp_Madd_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_add_temp_Madd_cy<2> (filtr_kih/Madd_add_temp_Madd_cy<2>)
+     XORCY:CI->O           1   0.804   0.499  filtr_kih/Madd_add_temp_Madd_xor<3> (filtr_kih/add_temp<3>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_add_temp_1_Madd_lut<3> (filtr_kih/Madd_add_temp_1_Madd_lut<3>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_1_Madd_cy<3> (filtr_kih/Madd_add_temp_1_Madd_cy<3>)
+     XORCY:CI->O           1   0.804   0.499  filtr_kih/Madd_add_temp_1_Madd_xor<4> (filtr_kih/add_temp_1<4>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_add_temp_2_Madd_lut<4> (filtr_kih/Madd_add_temp_2_Madd_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_2_Madd_cy<4> (filtr_kih/Madd_add_temp_2_Madd_cy<4>)
+     XORCY:CI->O           1   0.804   0.499  filtr_kih/Madd_add_temp_2_Madd_xor<5> (filtr_kih/add_temp_2<5>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_add_temp_3_Madd_lut<5> (filtr_kih/Madd_add_temp_3_Madd_lut<5>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_3_Madd_cy<5> (filtr_kih/Madd_add_temp_3_Madd_cy<5>)
+     XORCY:CI->O           1   0.804   0.499  filtr_kih/Madd_add_temp_3_Madd_xor<6> (filtr_kih/add_temp_3<6>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_add_temp_4_Madd_lut<6> (filtr_kih/Madd_add_temp_4_Madd_lut<6>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_4_Madd_cy<6> (filtr_kih/Madd_add_temp_4_Madd_cy<6>)
+     XORCY:CI->O           1   0.804   0.499  filtr_kih/Madd_add_temp_4_Madd_xor<7> (filtr_kih/add_temp_4<7>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_add_temp_5_Madd_lut<7> (filtr_kih/Madd_add_temp_5_Madd_lut<7>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_5_Madd_cy<7> (filtr_kih/Madd_add_temp_5_Madd_cy<7>)
+     XORCY:CI->O           1   0.804   0.499  filtr_kih/Madd_add_temp_5_Madd_xor<8> (filtr_kih/add_temp_5<8>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_add_temp_6_Madd_lut<8> (filtr_kih/Madd_add_temp_6_Madd_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_6_Madd_cy<8> (filtr_kih/Madd_add_temp_6_Madd_cy<8>)
+     XORCY:CI->O           1   0.804   0.499  filtr_kih/Madd_add_temp_6_Madd_xor<9> (filtr_kih/add_temp_6<9>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_add_temp_7_Madd_Madd_lut<9> (filtr_kih/Madd_add_temp_7_Madd_Madd_lut<9>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_7_Madd_Madd_cy<9> (filtr_kih/Madd_add_temp_7_Madd_Madd_cy<9>)
+     XORCY:CI->O           1   0.804   0.499  filtr_kih/Madd_add_temp_7_Madd_Madd_xor<10> (filtr_kih/add_temp_7<10>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_add_temp_8_Madd_Madd_lut<10> (filtr_kih/Madd_add_temp_8_Madd_Madd_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_8_Madd_Madd_cy<10> (filtr_kih/Madd_add_temp_8_Madd_Madd_cy<10>)
+     XORCY:CI->O           1   0.804   0.499  filtr_kih/Madd_add_temp_8_Madd_Madd_xor<11> (filtr_kih/add_temp_8<11>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_add_temp_9_Madd_lut<11> (filtr_kih/Madd_add_temp_9_Madd_lut<11>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_add_temp_9_Madd_cy<11> (filtr_kih/Madd_add_temp_9_Madd_cy<11>)
+     XORCY:CI->O          13   0.804   1.062  filtr_kih/Madd_add_temp_9_Madd_xor<12> (filtr_kih/add_temp_9<12>)
+     LUT2:I1->O            1   0.704   0.000  filtr_kih/Madd_output_typeconvert_add0000_lut<0> (filtr_kih/Madd_output_typeconvert_add0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<0> (filtr_kih/Madd_output_typeconvert_add0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<1> (filtr_kih/Madd_output_typeconvert_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<2> (filtr_kih/Madd_output_typeconvert_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<3> (filtr_kih/Madd_output_typeconvert_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<4> (filtr_kih/Madd_output_typeconvert_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<5> (filtr_kih/Madd_output_typeconvert_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<6> (filtr_kih/Madd_output_typeconvert_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<7> (filtr_kih/Madd_output_typeconvert_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<8> (filtr_kih/Madd_output_typeconvert_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<9> (filtr_kih/Madd_output_typeconvert_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<10> (filtr_kih/Madd_output_typeconvert_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<11> (filtr_kih/Madd_output_typeconvert_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<12> (filtr_kih/Madd_output_typeconvert_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<13> (filtr_kih/Madd_output_typeconvert_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<14> (filtr_kih/Madd_output_typeconvert_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<15> (filtr_kih/Madd_output_typeconvert_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<16> (filtr_kih/Madd_output_typeconvert_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<17> (filtr_kih/Madd_output_typeconvert_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<18> (filtr_kih/Madd_output_typeconvert_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<19> (filtr_kih/Madd_output_typeconvert_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<20> (filtr_kih/Madd_output_typeconvert_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<21> (filtr_kih/Madd_output_typeconvert_add0000_cy<21>)
+     MUXCY:CI->O           0   0.059   0.000  filtr_kih/Madd_output_typeconvert_add0000_cy<22> (filtr_kih/Madd_output_typeconvert_add0000_cy<22>)
+     XORCY:CI->O           1   0.804   0.000  filtr_kih/Madd_output_typeconvert_add0000_xor<23> (filtr_kih/output_typeconvert<11>)
+     FDCE:D                    0.308          filtr_kih/output_register_11
+    ----------------------------------------
+    Total                     34.259ns (27.664ns logic, 6.595ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 30 / 24
+-------------------------------------------------------------------------
+Offset:              6.139ns (Levels of Logic = 4)
+  Source:            DataADC (PAD)
+  Destination:       ADCrwfgwg/DataADC1_4 (FF)
+  Destination Clock: clk rising
+
+  Data Path: DataADC to ADCrwfgwg/DataADC1_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   1.218   1.158  DataADC_IBUF (DataADC_IBUF)
+     LUT3:I0->O            6   0.704   0.844  ADCrwfgwg/DataADC1_3_mux000011 (ADCrwfgwg/N2)
+     LUT3:I0->O            1   0.704   0.499  ADCrwfgwg/DataADC1_4_mux0000_SW0 (N16)
+     LUT4:I1->O            1   0.704   0.000  ADCrwfgwg/DataADC1_4_mux0000 (ADCrwfgwg/DataADC1_4_mux0000)
+     FD:D                      0.308          ADCrwfgwg/DataADC1_4
+    ----------------------------------------
+    Total                      6.139ns (3.638ns logic, 2.501ns route)
+                                       (59.3% logic, 40.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_da21'
+  Total number of paths / destination ports: 144 / 144
+-------------------------------------------------------------------------
+Offset:              3.071ns (Levels of Logic = 1)
+  Source:            switch<1> (PAD)
+  Destination:       filtr_kih/output_register_11 (FF)
+  Destination Clock: clk_da21 rising
+
+  Data Path: switch<1> to filtr_kih/output_register_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           144   1.218   1.298  switch_1_IBUF (switch_1_IBUF)
+     FDCE:CE                   0.555          filtr_kih/delay_pipeline_0_0
+    ----------------------------------------
+    Total                      3.071ns (1.773ns logic, 1.298ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.914ns (Levels of Logic = 1)
+  Source:            spi/CS_s (FF)
+  Destination:       nSync (PAD)
+  Source Clock:      clk rising
+
+  Data Path: spi/CS_s to nSync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             17   0.591   1.051  spi/CS_s (spi/CS_s)
+     OBUF:I->O                 3.272          nSync_OBUF (nSync)
+    ----------------------------------------
+    Total                      4.914ns (3.863ns logic, 1.051ns route)
+                                       (78.6% logic, 21.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               5.021ns (Levels of Logic = 2)
+  Source:            clk (PAD)
+  Destination:       CLK_DAC (PAD)
+
+  Data Path: clk to CLK_DAC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.531  clk_IBUF (clk_IBUF1)
+     OBUF:I->O                 3.272          CLK_DAC_OBUF (CLK_DAC)
+    ----------------------------------------
+    Total                      5.021ns (4.490ns logic, 0.531ns route)
+                                       (89.4% logic, 10.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.31 secs
+ 
+--> 
+
+Total memory usage is 215940 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

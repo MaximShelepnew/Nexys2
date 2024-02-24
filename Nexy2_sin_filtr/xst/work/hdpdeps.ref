@@ -1,0 +1,29 @@
+V3 15
+FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/ADC_priem.vhd 2024/02/24.18:25:29 P.15xf
+EN work/ADC_priem 1708788332 \
+      FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/ADC_priem.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627
+AR work/ADC_priem/Behavioral 1708788333 \
+      FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/ADC_priem.vhd \
+      EN work/ADC_priem 1708788332
+FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/filter.vhd 2024/02/24.18:25:29 P.15xf
+EN work/filter 1708788334 \
+      FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/filter.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627
+AR work/filter/rtl 1708788335 \
+      FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/filter.vhd \
+      EN work/filter 1708788334
+FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/spi_master.vhd 2024/02/24.18:25:29 P.15xf
+EN work/spi_master 1708788330 \
+      FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/spi_master.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627
+AR work/spi_master/Behavioral 1708788331 \
+      FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/spi_master.vhd \
+      EN work/spi_master 1708788330
+FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/top_modul.vhd 2024/02/24.18:23:49 P.15xf
+EN work/top_modul 1708788336 \
+      FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/top_modul.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627
+AR work/top_modul/Behavioral 1708788337 \
+      FL C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/top_modul.vhd \
+      EN work/top_modul 1708788336 CP spi_master CP ADC_priem CP filter

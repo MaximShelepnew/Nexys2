@@ -1,0 +1,70 @@
+
+# PlanAhead Generated IO constraints 
+
+NET "led[7]" IOSTANDARD = LVCMOS33;
+NET "led[6]" IOSTANDARD = LVCMOS33;
+NET "led[5]" IOSTANDARD = LVCMOS33;
+NET "led[4]" IOSTANDARD = LVCMOS33;
+NET "led[3]" IOSTANDARD = LVCMOS33;
+NET "led[2]" IOSTANDARD = LVCMOS33;
+NET "led[1]" IOSTANDARD = LVCMOS33;
+NET "led[0]" IOSTANDARD = LVCMOS33;
+NET "switch[2]" IOSTANDARD = LVCMOS33;
+NET "switch[1]" IOSTANDARD = LVCMOS33;
+NET "switch[0]" IOSTANDARD = LVCMOS33;
+NET "clk" IOSTANDARD = LVCMOS33;
+#NET "M13" IOSTANDARD = LVCMOS33;
+#NET "R15" IOSTANDARD = LVCMOS33;
+#NET "R18" IOSTANDARD = LVCMOS33;
+NET "D1" IOSTANDARD = LVCMOS33;
+NET "D2" IOSTANDARD = LVCMOS33;
+NET "CLK_DAC" IOSTANDARD = LVCMOS33;
+NET "nSync_ADC" IOSTANDARD = LVCMOS33;
+NET "CLK_ADC" IOSTANDARD = LVCMOS33;
+NET "DataADC" IOSTANDARD = LVCMOS33;
+NET "DataADC2" IOSTANDARD = LVCMOS33;
+NET "nSync" IOSTANDARD = LVCMOS33;
+
+#NET "T17" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated physical constraints 
+#	nSync_ADC : out std_logic;
+#	CLK_ADC : out std_logic;
+#	DataADC : in std_logic;
+#	DataADC2 : in std_logic
+NET "nSync_ADC" LOC = J13;
+NET "CLK_ADC" LOC = P18;
+NET "DataADC" LOC = M18;
+NET "DataADC2" LOC = N18;
+
+#NET "M13" LOC = M13;
+#NET "R15" LOC = R15;
+#NET "R18" LOC = R18;
+NET "clk" LOC = B8;
+# 1 - G15 (Sync)DAC
+# 2 - J16 (Data IN A)
+# 3 - G13 (Data IN B)
+# 4 - H16 (Clock)
+
+# 1 - J13 (Sync)ADC
+# 2 - M18 (Data IN A)
+# 3 - N18 (Data IN B)
+# 4 - P18 (Clock)
+NET "D1" LOC = J16;
+NET "D2" LOC = G13;
+NET "CLK_DAC" LOC = H16;
+NET "nSync" LOC = G15;
+#NET "T17" LOC = T17;
+
+NET "led[0]" LOC = J14;
+NET "led[1]" LOC = J15;
+NET "led[2]" LOC = K15;
+NET "led[3]" LOC = K14;
+NET "led[4]" LOC = E17;
+NET "led[5]" LOC = P15;
+NET "led[6]" LOC = F4;
+NET "led[7]" LOC = R4;
+
+NET "switch[0]" LOC = M16;
+NET "switch[1]" LOC = M14;
+NET "switch[2]" LOC = L16;

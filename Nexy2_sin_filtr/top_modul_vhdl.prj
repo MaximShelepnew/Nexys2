@@ -1,0 +1,4 @@
+vhdl work "C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\spi_master.vhd"
+vhdl work "C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\filter.vhd"
+vhdl work "C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\ADC_priem.vhd"
+vhdl work "C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\top_modul.vhd"

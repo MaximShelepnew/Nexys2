@@ -1,0 +1,11 @@
+Release 14.1 Drc P.15xf (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Sat Feb 24 18:27:00 2024
+
+drc -z top_modul.ncd top_modul.pcf
+
+WARNING:PhysDesignRules:367 - The signal <DataADC2_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

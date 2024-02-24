@@ -1,0 +1,4 @@
+vhdl work "spi_master.vhd"
+vhdl work "filter.vhd"
+vhdl work "ADC_priem.vhd"
+vhdl work "top_modul.vhd"

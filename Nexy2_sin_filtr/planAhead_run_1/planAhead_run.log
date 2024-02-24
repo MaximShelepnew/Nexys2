@@ -1,0 +1,64 @@
+
+****** PlanAhead v14.1
+  **** Build 179419 by xbuild on Thu Apr 26 11:41:35 MDT 2012
+    ** Copyright 1986-1999, 2001-2012 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Device-36] Loading parts and site information from C:/Xilinx/14.1/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.1/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.1/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+starting gui ...
+source C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/pa.fromHdl.tcl
+# create_project -name Nexy2_sin_filtr -dir "C:/Xilinx/Project/laba_spartan3e/Nexy2_sin_filtr/planAhead_run_1" -part xc3s500efg320-4
+Parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Finished parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Finished parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+Finished parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "top_modul.ucf" [current_fileset -constrset]
+Adding file 'C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\top_modul.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {spi_master.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {filter.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ADC_priem.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {top_modul.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top top_modul $srcset
+# add_files [list {top_modul.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s500efg320-4
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts\xilinx\rtl\lib\synplify\synattr.vhd" into library synplify
+Parsing VHDL file "C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts\xilinx\rtl\lib\synplify\synattr.vhd" into library synplify
+Parsing VHDL file "C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\spi_master.vhd" into library work
+Parsing VHDL file "C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\filter.vhd" into library work
+Parsing VHDL file "C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\ADC_priem.vhd" into library work
+Parsing VHDL file "C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\top_modul.vhd" into library work
+INFO: [Project-86] Reading macro library C:/Xilinx/14.1/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.1/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.1/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockBuffers.xml
+Loading package from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/Package.xml
+Loading io standards from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device-19] Loading pkg sso from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.1/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing-77] Reading timing library C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing-34] Done reading timing library C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\top_modul.ucf]
+Finished Parsing UCF File [C:\Xilinx\Project\laba_spartan3e\Nexy2_sin_filtr\top_modul.ucf]
+INFO: [Project-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project-176] Phase 0 Netlist Checksum: 7a75a2d 
+exit
+INFO: [Common-206] Exiting PlanAhead...
+INFO: [Common-83] Releasing license: PlanAhead
